@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/scraper-validator/static/css/main.0cd5f28d.chunk.css",
+    "main.js": "/scraper-validator/static/js/main.cbd1f830.chunk.js",
+    "main.js.map": "/scraper-validator/static/js/main.cbd1f830.chunk.js.map",
+    "runtime-main.js": "/scraper-validator/static/js/runtime-main.1406f8f6.js",
+    "runtime-main.js.map": "/scraper-validator/static/js/runtime-main.1406f8f6.js.map",
+    "static/js/2.6c4a3479.chunk.js": "/scraper-validator/static/js/2.6c4a3479.chunk.js",
+    "static/js/2.6c4a3479.chunk.js.map": "/scraper-validator/static/js/2.6c4a3479.chunk.js.map",
+    "index.html": "/scraper-validator/index.html",
+    "static/css/main.0cd5f28d.chunk.css.map": "/scraper-validator/static/css/main.0cd5f28d.chunk.css.map",
+    "static/js/2.6c4a3479.chunk.js.LICENSE.txt": "/scraper-validator/static/js/2.6c4a3479.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1406f8f6.js",
+    "static/js/2.6c4a3479.chunk.js",
+    "static/css/main.0cd5f28d.chunk.css",
+    "static/js/main.cbd1f830.chunk.js"
+  ]
+}

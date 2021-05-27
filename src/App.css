@@ -1,0 +1,348 @@
+html, body, #outer {
+  height:100%;
+  margin:0;
+  box-sizing:border-box;/* includes padding and border to size calculation */
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bisque {
+  background-color: bisque;
+}
+
+.brown {
+  background-color: brown;
+}
+
+.red {
+  background-color: red;
+}
+
+.app {
+  height: 100vh;
+  /* grid container settings */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: 
+      'header'
+      'main'
+      'footer';
+}
+.app > header {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+}
+
+.app > main {
+  grid-area: main;
+  overflow: auto;
+  margin-top: 0.5rem;
+}
+.app > footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: dodgerblue;
+  color: white;
+  text-align: center;
+}
+
+.tab-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.tab-btn{
+  font-size: x-large;
+  padding: 1rem;
+  cursor: pointer;
+  border: 0.01rem solid white;
+}
+
+/*
+old .tab-btn{
+  border-radius: 0.2rem;
+  font-size: x-large;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+  margin: 0.2rem;
+  cursor: pointer;
+}
+*/
+
+/*
+.status-btn {
+  padding: 1rem;
+  font-size: x-large;
+  
+}
+.status-btn:first-child{
+  border-radius: 0.5rem 0rem 0rem 0.5rem;
+}
+
+.status-btn:last-child{
+  border-radius: 0rem 0.5rem 0.5rem 0rem;
+}
+*/
+.tab-btn:first-child{
+  border-radius: 0.5rem 0rem 0rem 0.5rem;
+}
+
+.tab-btn:last-child{
+  border-radius: 0rem 0.5rem 0.5rem 0rem;
+}
+
+.tab-complete{
+  background-color: steelblue;
+  color: white;
+}
+.tab-incomplete{
+  background-color:cornsilk;
+  color: black;
+  border: 0.1rem solid grey;
+}
+.tab-active{
+  border: 0.2rem solid goldenrod;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 0.5rem;
+}
+
+.titles-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  width: 75%;
+  flex-wrap: wrap;
+}
+
+.title-box {
+  padding: 0.3rem;
+  background-color: gold;
+  margin: 0.1rem;
+  border-radius: 0.2rem;
+}
+
+.title-box2:nth-child(odd) {
+  background-color: silver;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 20%;
+}
+
+.title-button {
+  width: auto;
+  padding: 0.2rem;
+  border-radius: 0.4rem;
+  background-color: dodgerblue;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  font-size: larger;
+}
+
+.title-button:hover {
+  background-color: lightskyblue;
+  color: black;
+}
+
+.anchor-button{
+  text-decoration: none;
+}
+
+.body-container0 {
+  /*max-height: 30rem;*/
+  height: 65%;
+  overflow-y: scroll;
+  margin-top: 0.5rem;
+  overflow: auto;
+
+}
+
+.body-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 0.2rem;
+  width: max-content;
+  margin: 0.5rem;
+  box-shadow: darkgrey 0rem 0.4rem 0.5rem;
+}
+
+.content-title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.2rem;
+  background-color: darkgrey;
+  border-radius: 0.2rem 0.2rem 0rem 0rem;
+  
+}
+
+.content-title {
+  text-align: left;
+  font-size: x-large;
+  padding: 0.2rem;
+  margin-right: 1rem;
+}
+
+.content-status {
+  text-align: right;
+  font-size: x-large;
+  padding: 0.2rem;
+  background-color: gold;
+  border-radius: 0.2rem;
+}
+
+.content-body-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0.0rem;
+  
+}
+
+.img {
+  width: min-content;
+  border-bottom: 0.01rem solid darkgrey;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  text-align: center;
+}
+.value-box{
+  padding: 0.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.value {
+  border-radius: 0.2rem;
+  background-color: gold;
+  font-size: x-large;
+  padding: 0.5rem;
+}
+
+.row-buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.status-btn {
+  padding: 1rem;
+  font-size: x-large;
+  
+}
+.status-btn:first-child{
+  border-radius: 0.5rem 0rem 0rem 0.5rem;
+}
+
+.status-btn:last-child{
+  border-radius: 0rem 0.5rem 0.5rem 0rem;
+}
+
+.good-btn {
+  background-color: darkblue;
+  color: white;
+  cursor: pointer;
+  box-shadow: dodgerblue 0rem 0.4rem 0.5rem inset;
+}
+
+.good-btn:hover {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.good-btn.active {
+  background-color: dodgerblue;
+  border: .15rem solid white;
+  box-shadow: 0 0;
+}
+
+.bad-btn {
+  background-color: darkred;
+  color: white;
+  cursor: pointer;
+  box-shadow: crimson 0rem 0.4rem 0.5rem inset;
+}
+
+.bad-btn:hover {
+  background-color: crimson;
+}
+
+.bad-btn.active {
+  background-color: crimson;
+  border: .15rem solid white;
+  box-shadow: 0 0;
+}
+
+.correct-input {
+  padding: 0.3rem;
+  display: block;
+  border: none;
+  border-bottom: 0.1rem solid grey;
+  width: 90%
+}
+.correct-input:focus{
+  outline: none;
+  border-bottom: 0.1rem solid darkblue;
+  background-color: cornsilk;
+  padding: 0.4rem;
+}
+.correction-box{
+  padding: 0.5rem;
+}
+
+.identification{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+}
+
+.identification-box{
+  width: 48%;
+  margin: 0.5rem;
+}
+
+@media (max-width: 800px) {
+  .identification {
+    flex-direction: column;
+  }
+  .identification-box{
+    width: 95%;
+    margin: 0.5rem;
+  }
+}
+
+.error-top{
+  position: relative;
+  width: 100%;
+  text-align: center;
+  color: red;
+  font-size: x-large;
+  margin-bottom: 0.5rem;
+}

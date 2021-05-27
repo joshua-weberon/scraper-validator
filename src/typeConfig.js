@@ -22,13 +22,13 @@ const summaryConfig_ = {
         label: 'Street',
         sourceCleaner: emptyCleaner,
         inputCleaner: streetCleaner,
-        image: 'street.PNG'
+        image: 'street.png'
     },
     "city": {
         label: 'City',
         sourceCleaner: emptyCleaner,
         inputCleaner: cityCleaner,
-        image: 'city.PNG'
+        image: 'city.png'
     },
 }
 
@@ -37,91 +37,91 @@ const summaryConfig = {
         label: 'Street',
         sourceCleaner: emptyCleaner,
         inputCleaner: streetCleaner,
-        image: 'street.PNG'
+        image: 'street.png'
     },
     "city": {
         label: 'City',
         sourceCleaner: emptyCleaner,
         inputCleaner: cityCleaner,
-        image: 'city.PNG'
+        image: 'city.png'
     },
     "state": {
         label: 'State',
         sourceCleaner: emptyCleaner,
         inputCleaner: stateCleaner,
-        image: 'state.PNG'
+        image: 'state.png'
     },
     "zip": {
         label: 'Zip',
         sourceCleaner: emptyCleaner,
         inputCleaner: zipCleaner,
-        image: 'zip.PNG'
+        image: 'zip.png'
     },
     "price": {
         label: 'RMV',
         sourceCleaner: emptyCleaner,
         inputCleaner: priceCleaner,
-        image: 'price.PNG'
+        image: 'price.png'
     },
     "bedrooms": {
         label: 'Bedrooms',
         sourceCleaner: emptyCleaner,
         inputCleaner: bedroomsCleaner,
-        image: 'bedrooms.PNG'
+        image: 'bedrooms.png'
     },
     "bathrooms": {
         label: 'Bathrooms',
         sourceCleaner: emptyCleaner,
         inputCleaner: bathroomsCleaner,
-        image: 'bathrooms.PNG'
+        image: 'bathrooms.png'
     },
     "livingareasqft": {
         label: 'Living Area Sqft',
         sourceCleaner: emptyCleaner,
         inputCleaner: livingareasqftCleaner,
-        image: 'livingareasqft.PNG'
+        image: 'livingareasqft.png'
     },
     "hometype": {
         label: 'Type',
         sourceCleaner: emptyCleaner,
         inputCleaner: hometypeCleaner,
-        image: 'hometype.PNG'
+        image: 'hometype.png'
     },
     "soldprice": {
         label: 'Last Sold Price',
         sourceCleaner: emptyCleaner,
         inputCleaner: soldpriceCleaner,
-        image: 'soldprice.PNG'
+        image: 'soldprice.png'
     },
     "soldDate": {
         label: 'Sold Date',
         sourceCleaner: soldDateCleaner,
         inputCleaner: soldDateCleaner,
-        image: 'solddate.PNG'
+        image: 'solddate.png'
     },
     "Estimate/sqft": {
         label: 'Price by sq ft',
         sourceCleaner: emptyCleaner,
         inputCleaner: EstimateSqftCleaner,
-        image: 'estimatesqft.PNG'
+        image: 'estimatesqft.png'
     },
     "ownernames": {
         label: 'Owner Name (Public)',
         sourceCleaner: emptyCleaner,
         inputCleaner: ownernamesCleaner,
-        image: 'ownernames.PNG'
+        image: 'ownernames.png'
     },
     "mailingaddress": {
         label: 'Mailing Address',
         sourceCleaner: emptyCleaner,
         inputCleaner: mailingaddressCleaner,
-        image: 'mailingaddress.PNG'
+        image: 'mailingaddress.png'
     },
     "apn": {
         label: 'Parecel Number',
         sourceCleaner: emptyCleaner,
         inputCleaner: apnCleaner,
-        image: 'apn.PNG'
+        image: 'apn.png'
     }
 }
 

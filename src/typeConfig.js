@@ -17,7 +17,7 @@ import {
     mailingaddressCleaner
 } from './utility/cleaners';
 
-const summaryConfig = {
+const summaryConfig_ = {
     "street": {
         label: 'Street',
         sourceCleaner: emptyCleaner,
@@ -32,7 +32,7 @@ const summaryConfig = {
     },
 }
 
-const summaryConfig_ = {
+const summaryConfig = {
     "street": {
         label: 'Street',
         sourceCleaner: emptyCleaner,

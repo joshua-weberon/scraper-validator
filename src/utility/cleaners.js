@@ -1,5 +1,3 @@
-
-
 const trimCleaner = (data) => data != null ? data.trim() : '';
 const quoteCleaner = (data) => data.replace(/^[\"']/,'').replace(/[\"']$/,'');
 const commaCleaner = (data) => data.replace(/^[,]/,'').replace(/[,]$/,'');
@@ -8,7 +6,6 @@ const dollarCleaner = (data) => data.replace(/[\$,]/g,'');
 const defaultDates = ['','1970-01-01','1/1/1970','01/01/1970','0'];
 const isInvalidDate = data => new Date(data) == 'Invalid Date';
 const isDefaultOrInvalidDate = data => defaultDates.some(dt => dt == data) || isInvalidDate(data);
-//const dateCleaner = (data) => isDefaultOrInvalidDate(data) ? '1970-01-01' : data;
 const getUTCOffsetDate = (utcInputDateString) => {
     let dt = new Date(utcInputDateString);
     return new Date(dt.getTime()-(dt.getTimezoneOffset()*60*1000));
@@ -22,7 +19,6 @@ const dateCleaner = (data) => {
 }
 const sqftCleaner = (data) => data.replace('sqft','').trim();
 const zeroCleaner = (data) => +data == 0 ? '' : data;
-//â€“
 
 const cleaningPipe = (data,...functions) => {
     let cleanData = data;

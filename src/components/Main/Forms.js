@@ -7,8 +7,7 @@ const getFormInput =(form,index,data,setData,config)=> {
         let inputCleaner = config[form.keyName] != null ? config[form.keyName].inputCleaner : null;
         let cleanInput = typeof inputCleaner == 'function'
                             ? inputCleaner(userInput)
-                            : userInput;
-        //let isValid = validator(cleanInput,oldForm.scrapeVal);
+                            : userInput;        
         let newForm = {...oldForm,userInput,cleanInput};
         let newData = [...data];
         newData[index].forms[form.keyName] = newForm;

@@ -1,6 +1,4 @@
 
-//import csv from 'csvtojson';
-
 const convertFileToBase64 = (allFiles) => {
     return new Promise((resolve)=> {
         let ef = allFiles;
@@ -9,12 +7,11 @@ const convertFileToBase64 = (allFiles) => {
         let reader = new FileReader();
 
         reader.onloadend = e => {
-            files.base64 = reader.result;
-            //this.props.handleFiles(files);
+            files.base64 = reader.result;            
             resolve(files);
         }
         reader.readAsText(file);
-        //reader.readAsDataURL(file);
+        
     })
     
 }

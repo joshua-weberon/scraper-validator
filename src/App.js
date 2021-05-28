@@ -2,7 +2,6 @@ import React, {  useState } from 'react';
 import { typeConfig, types, summaryIdentifiers } from './typeConfig';
 import { convertFileToBase64, getContentInJSON, getConfiguredData } from './utility';
 import {useLocalStorage} from './utility/storage';
-// import csv from './utility/csvtojson3';
 
 import FileReader from './components/FileReader';
 import SelectionTabs from './components/SelectionTabs';
@@ -26,9 +25,7 @@ const App = () => {
     const handleFiles = async (event) => {
         let files = await convertFileToBase64(event.target.files);
         let json = await getContentInJSON(files.base64);
-        const data = getConfiguredData(typeConfig[type], summaryIdentifiers, json)
-        //console.log({ json });
-        //console.log(event.target.files);
+        const data = getConfiguredData(typeConfig[type], summaryIdentifiers, json);
         setConfig(typeConfig[type]);
         setData(data);
     }

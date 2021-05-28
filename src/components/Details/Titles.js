@@ -2,11 +2,7 @@ import React from 'react'
 import {validState} from '../../utility/constants';
 
 const getTitles = ({input,forms,isComplete,isValid,index}) => {
-    /*
-    <div class="title-box">Scraper Version: 8456213789</div>
-    <div class="title-box">Scraped timestamp: 2021-01-31 21:37:27.897+00</div>
-    <div class="title-box">#Inputs Assessed: 5/10</div>
-    */
+    
     let { scrapetimestamp, scraperVersion, nxtcloudpath } = input;
     let fileName = nxtcloudpath.split('/').pop();
     let { totalForms, totalFormsComplete } = Object.keys(forms).reduce((acc, key) => {

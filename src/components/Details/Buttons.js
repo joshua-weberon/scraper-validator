@@ -1,26 +1,22 @@
 import React from 'react'
 
-const getInvalidForms = (obj) => {
+const getInvalidForms = (obj,userName,batchId) => {
     let {recordid,apn,scraperVersion,crawltimestamp,scrapetimestamp,filepath} = obj.input;
-    let idObj = {recordid,apn,scraperVersion,crawltimestamp,scrapetimestamp,filepath};
+    let idObj = {recordid,apn,scraperVersion,crawltimestamp,scrapetimestamp,filepath,userName,batchId};
     return Object.keys(obj.forms).reduce((acc,key)=>{
         let form = obj.forms[key];
         if(form.isValid == false){
-            //acc[`scrape_${key}`] = form.scrapeVal;
-            //acc[`user_input_${key}`] = form.userInput;
-            //acc[`clean_input_${key}`] = form.cleanInput;
             let {scrapeVal,userInput,cleanInput} = form;
             acc.push({...idObj,field:key,scrapeVal,userInput,cleanInput});
         }            
         return acc;
     },[])
-    //},{recordid,apn,scraperVersion,crawltimestamp,scrapetimestamp,filepath})
 }
 
-const getInvalids = (data) => {
+const getInvalids = (data,userName,batchId) => {
     return data.reduce((acc,d)=>{
         if(d.isValid == false){
-            acc.push(...getInvalidForms(d));
+            acc.push(...getInvalidForms(d,userName,batchId));
         }
         return acc;
     },[])
@@ -37,8 +33,8 @@ const getHeaderRows = (invalids) => {
 
 }
 
-const getErrorCSV = (data) => {
-    let invalids = getInvalids(data);
+const getErrorCSV = (data,userName,batchId) => {
+    let invalids = getInvalids(data,userName,batchId);
     let headerRows = getHeaderRows(invalids);
     let firstRow = Object.keys(headerRows).reduce((acc,key)=>{
         acc[[headerRows[key]]] = key;
@@ -47,7 +43,6 @@ const getErrorCSV = (data) => {
     let csvRows = invalids.reduce((acc,curr)=>{
         let row = [];
         Object.keys(curr).forEach(key => {
-            //acc[key] = acc[key] == null ? ++index : acc[key];
             row[headerRows[key]] = curr[key];
         })
         acc.push(row);
@@ -68,7 +63,7 @@ const getSubmitButton = (data,userName,batchId) => {
         return acc;
     },{isValid:flag,isComplete:flag})
     if(!isValid  && isComplete ){
-        return <a className="title-button anchor-button" href={getErrorCSV(data)} download="invalid_csv.csv">Get CSV with invalids</a>
+        return <a className="title-button anchor-button" href={getErrorCSV(data,userName,batchId)} download="invalid_csv.csv">Get CSV with invalids</a>
     }
 }
 

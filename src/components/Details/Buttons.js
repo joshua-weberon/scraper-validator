@@ -63,7 +63,11 @@ const getSubmitButton = (data,userName,batchId) => {
         return acc;
     },{isValid:flag,isComplete:flag})
     if(!isValid  && isComplete ){
-        return <a className="title-button anchor-button" href={getErrorCSV(data,userName,batchId)} download="invalid_csv.csv">Get CSV with invalids</a>
+        return <a className="title-button anchor-button" 
+                    href={getErrorCSV(data,userName,batchId)} 
+                    download={`${batchId}_invalid_csv.csv`}>
+                        Get CSV with invalids
+                </a>
     }
 }
 

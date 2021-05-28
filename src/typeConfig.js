@@ -58,7 +58,7 @@ const summaryConfig = {
         image: 'zip.png'
     },
     "price": {
-        label: 'RMV',
+        label: 'RVM',
         sourceCleaner: emptyCleaner,
         inputCleaner: priceCleaner,
         image: 'price.png'
